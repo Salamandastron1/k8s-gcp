@@ -8,6 +8,6 @@ docker push regalme/multi-client:$SHA
 docker push regalme/multi-server:$SHA
 docker push regalme/multi-worker:$SHA
 kubectl apply -f k8s
-kubectl set image deployments/server server=regalme/multi-server$SHA
-kubectl set image deployments/client client=regalme/multi-client$SHA
-kubectl set image deployments/worker worker=regalme/multi-worker$SHA
+kubectl set image deployments/server server=regalme/multi-server:$SHA
+kubectl set image deployments/client client=regalme/multi-client:$SHA
+kubectl set image deployments/worker worker=regalme/multi-worker:$SHA
