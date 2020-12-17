@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server-deployment
+  name: server
 spec:
   selector:
     matchLabels:
@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: stephengrider/multi-server
+        image: regalme/multi-server
         ports:
         - containerPort: 5000
         env:

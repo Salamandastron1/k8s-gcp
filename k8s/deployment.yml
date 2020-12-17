@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: client-deployment
+  name: client
 spec:
   replicas: 3
   selector:
     matchLabels:
-      component: web
+      component: client
   template:
     metadata:
       labels:
-        component: web
+        component: client
     spec:
       containers:
         - name: client
-          image: stephengrider/multi-client
+          image: regalme/multi-client
           ports:
             - containerPort: 3000
